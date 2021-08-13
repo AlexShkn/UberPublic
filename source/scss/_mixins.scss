@@ -1,0 +1,67 @@
+@mixin label_dark {
+	position: relative;
+	margin: 0 auto;
+	height: 24px;
+	width: 112px;
+	padding: 5px 12px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+	z-index: 2;
+}
+@mixin title-dark {
+	position: relative;
+	margin-bottom: 0;
+	margin-top: 38px;
+	color: #222222;
+	font-size: 38px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 2;
+	@media (max-width: 768px) {
+		font-size: 35px;
+	}
+	margin-top: 16px;
+}
+
+@mixin label_white {
+	position: relative;
+	margin: 0 auto;
+	height: 24px;
+	width: 112px;
+	padding: 6px 12px;
+	background-color: #ffffff;
+	color: #070716;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+	z-index: 2;
+	@media (max-width: 575px) {
+	}
+}
+@mixin title-white {
+	position: relative;
+	margin-bottom: 0;
+	margin-top: 38px;
+	color: #ffffff;
+	font-size: 38px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 2;
+	@media (max-width: 768px) {
+		font-size: 35px;
+	}
+}
+
+@mixin btn_hover {
+	&:hover {
+		background-image: none;
+		background-color: #003fff;
+	}
+}

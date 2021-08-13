@@ -1,0 +1,249 @@
+header {
+	position: relative;
+	height: 40px;
+	@media (max-width: 575px) {
+		height: 30px;
+	}
+}
+nav {
+	position: fixed;
+	width: 100%;
+	height: 40px;
+	background-color: #212121;
+	z-index: 5;
+	@media (max-width: 575px) {
+		height: 30px;
+	}
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 13px 70px;
+	margin: 0;
+	list-style: none;
+	@media (max-width: 767px) {
+		position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 30px;
+		left: -100%;
+		width: 40%;
+		height: 100vh;
+		padding: 20px 15px;
+		background-color: rgba(0, 0, 0, 0.9);
+		transition: 0.6s all;
+	}
+	&__active {
+		left: 0;
+	}
+
+	&__item {
+		border-right: 2px dotted black;
+		padding-right: 28px;
+		@media (max-width: 1200px) {
+			padding-right: 20px;
+		}
+		@media (max-width: 991px) {
+			padding-right: 8px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			padding: 5px 0;
+			margin-bottom: 20px;
+			border: none;
+			text-align: center;
+		}
+	}
+	&__item:last-child {
+		border: none;
+	}
+
+	&__link {
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: 300;
+		transition: 0.5s all;
+		&:hover {
+			color: $main-color;
+			text-decoration: none;
+		}
+		@media (max-width: 1200px) {
+			font-size: 13px;
+		}
+		@media (max-width: 991px) {
+			font-size: 10px;
+		}
+		@media (max-width: 767px) {
+			display: block;
+			font-size: 18px;
+			text-decoration: underline;
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+}
+.hamburger {
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 26px;
+		height: 12px;
+		span {
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #fff;
+			margin-bottom: 2px;
+			transition: 0.6s all;
+		}
+	}
+	&__active {
+		span {
+			margin-bottom: -2px;
+			&:nth-child(1) {
+				transform: translateY(3px) rotate(-45deg);
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(3) {
+				transform: translateY(3px) rotate(45deg);
+			}
+		}
+	}
+}
+
+.subheader {
+	height: 84px;
+	top: 40px;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	width: 100%;
+	@media (max-width: 575px) {
+		height: 60px;
+		top: 30px;
+	}
+
+	&__logo {
+		display: block;
+		max-width: 100%;
+		margin-top: 16px;
+		@media (max-width: 575px) {
+			margin-top: 20px;
+		}
+		img {
+			@media (max-width: 991px) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__official {
+		margin-top: 6px;
+		opacity: 0.5;
+		color: #ffffff;
+		font-size: 13px;
+		font-weight: 400;
+		@media (max-width: 991px) {
+			font-size: 11px;
+		}
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	&__call {
+		margin-top: 19px;
+		color: #ffffff;
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 14px;
+		text-align: right;
+		@media (max-width: 991px) {
+			padding-right: 4px;
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__phone {
+		display: block;
+		margin-top: 8px;
+		color: #ffffff;
+		font-size: 22px;
+		font-weight: 400;
+		text-align: right;
+		text-transform: uppercase;
+		&:hover {
+			color: #fff;
+		}
+		@media (max-width: 1200px) {
+			font-size: 20px;
+		}
+		@media (max-width: 767px) {
+			margin-top: 10px;
+			font-size: 20px;
+			text-align: center;
+		}
+		@media (max-width: 575px) {
+			font-size: 14px;
+			margin-top: 10px;
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		width: 172px;
+		height: 46px;
+		margin-top: 19px;
+		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+		border: none;
+		border-radius: 2px;
+		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.5s all;
+		@include btn_hover;
+		@media (max-width: 767px) {
+			display: block;
+			width: 200px;
+			height: 40px;
+			margin: 0 auto;
+			margin-top: 5px;
+			&:hover {
+				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+			}
+		}
+		@media (max-width: 575px) {
+			margin-top: 8px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+			width: 140px;
+			height: 22px;
+			font-size: 12px;
+		}
+	}
+}
+.xs-hidden {
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+.xs-visible {
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+	}
+}

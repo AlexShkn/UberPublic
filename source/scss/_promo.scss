@@ -1,0 +1,90 @@
+.promo {
+	min-height: 800px;
+	background: url('../img/first_bg.png') center center/cover no-repeat;
+	padding: 150px 0 135px 0;
+	@media (max-width: 575px) {
+		min-height: 340px;
+		padding: 100px 0 35px 0;
+	}
+
+	&__header {
+		color: #ffffff;
+		font-size: 60px;
+		font-weight: 700;
+		text-align: center;
+		line-height: 60px;
+		margin: 0;
+		@media (max-width: 1200px) {
+			font-size: 50px;
+		}
+		@media (max-width: 991px) {
+			font-size: 40px;
+		}
+		@media (max-width: 767px) {
+			font-size: 40px;
+			line-height: 45px;
+		}
+		@media (max-width: 575px) {
+			font-size: 26px;
+			padding: 0 40px 0 40px;
+		}
+	}
+
+	&__subheader {
+		color: #ffffff;
+		font-size: 36px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 36px;
+		margin: 14px 0 23px 0;
+		@media (max-width: 991px) {
+			font-size: 30px;
+		}
+		@media (max-width: 767px) {
+			font-size: 25px;
+		}
+		@media (max-width: 575px) {
+			padding: 0 25px 0 29px;
+			font-size: 17px;
+		}
+	}
+
+	&__descr {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: center;
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	&__btn {
+		display: block;
+		margin: 118px auto 0 auto;
+		width: 259px;
+		height: 63px;
+		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+		border: none;
+		border-radius: 4px;
+		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.5s all;
+		@include btn_hover;
+		@media (max-width: 767px) {
+			&:hover {
+				background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+			}
+		}
+		@media (max-width: 575px) {
+			margin: 75px auto 0 auto;
+		}
+	}
+}

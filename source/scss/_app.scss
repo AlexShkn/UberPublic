@@ -1,0 +1,128 @@
+.app {
+	min-height: 864px;
+	padding: 48px 0 80px 0;
+	background: url('/img/App/app_bg.png') center center/cover no-repeat;
+	position: relative;
+	z-index: 0;
+	@media (max-width: 575px) {
+		padding: 25px 0 40px 0;
+	}
+
+	&__label {
+		@include label_dark;
+	}
+
+	&__title {
+		@include title-dark;
+		@media (max-width: 575px) {
+			font-size: 16px;
+		}
+	}
+
+	&__subtitle {
+		padding: 19px 0 32px 0;
+		color: #222222;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: center;
+		@media (max-width: 575px) {
+			font-size: 14px;
+			padding: 15px 0 25px 0;
+		}
+	}
+
+	&__item {
+		position: relative;
+		width: 320px;
+		height: 280px;
+		margin: 0 auto 19px auto;
+		padding-top: 92px;
+		text-align: center;
+		@media (max-width: 1200px) {
+			width: 310px;
+		}
+		@media (max-width: 575px) {
+			width: 290px;
+			height: 254px;
+			font-size: 20px;
+		}
+	}
+	&__item-1 {
+		background: url('/img/App/app_1.png') center center/cover no-repeat;
+	}
+
+	&__item-2 {
+		background: url('/img/App/app_2.png') center center/cover no-repeat;
+	}
+
+	&__item-3 {
+		background: url('/img/App/app_3.png') center center/cover no-repeat;
+	}
+
+	&__item-4 {
+		background: url('/img/App/app_4.png') center center/cover no-repeat;
+	}
+
+	&__item-5 {
+		background: url('/img/App/app_5.png') center center/cover no-repeat;
+	}
+
+	&__item-6 {
+		background: url('/img/App/app_6.png') center center/cover no-repeat;
+	}
+
+	&__item-subtitle {
+		color: #ffffff;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 31px;
+		text-align: center;
+		text-transform: uppercase;
+		@media (max-width: 575px) {
+			font-size: 18px;
+		}
+	}
+
+	&__title-plus {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 26px;
+		height: 26px;
+		margin: 0 auto;
+		background-color: #000000;
+		border-radius: 100%;
+		padding: 6px;
+		cursor: pointer;
+		&:before {
+			content: '';
+			display: block;
+			width: 14px;
+			height: 2px;
+			background-color: $main-color;
+			transition: 0.3s all;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+			height: 14px;
+			width: 2px;
+			background-color: $main-color;
+			transition: 0.3s all;
+		}
+		&:hover {
+			&::before,
+			&::after {
+				background-color: $second-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+@import 'nullstyle';
+// @import "fontstyle";
+@import 'mixins';
+@import 'variables';
+@import 'media';
+/*------------------------------*/
+@import 'header';
+@import 'promo';
+@import 'app';
+@import 'coverage';
+@import 'conditions';
+@import 'benefits';
+@import 'choise';
+@import 'footer';
+/*------------------------------*/
+* {
+	font-family: 'Roboto', sans-serif;
+}

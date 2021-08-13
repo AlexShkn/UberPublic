@@ -1,0 +1,51 @@
+.coverage {
+	min-height: 717px;
+	position: relative;
+	z-index: 0;
+	background: url('/img/coverage_bg2.png') center (center / cover) no-repeat;
+	padding: 49px 0px 49px 0px;
+	@media (max-width: 575px) {
+		min-height: 360px;
+		padding: 25px 0 30px 0;
+	}
+
+	&__label {
+		@include label_white;
+	}
+
+	&__title {
+		@include title-white;
+		@media (max-width: 575px) {
+			margin: 15px 0 14px 0;
+			font-size: 19px;
+		}
+	}
+
+	&__subtitle {
+		color: #ffffff;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: center;
+		@media (max-width: 575px) {
+			font-size: 16px;
+		}
+	}
+	&__link {
+		position: absolute;
+		bottom: 49px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #1fbad6;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 68px;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		@media (max-width: 575px) {
+			font-size: 12px;
+			bottom: 30px;
+		}
+	}
+}
